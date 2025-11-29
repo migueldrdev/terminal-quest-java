@@ -1,17 +1,18 @@
 package modelo;
 import java.io.Serializable;
-import java.util.List;
 
 public class EstadoJuego implements Serializable {
     private Personaje jugador;
-    private int nivelActual;
-    private List<Item> inventarioGlobal; // Tu lista con lambdas
+    private int pisoActual; // Reemplaza a las coordenadas
 
     public EstadoJuego(Personaje jugador) {
         this.jugador = jugador;
-        this.nivelActual = 1;
+        this.pisoActual = 1; // Empezamos en el piso 1
     }
 
-    // Getters y Setters...
     public Personaje getJugador() { return jugador; }
+
+    public int getPisoActual() { return pisoActual; }
+
+    public void avanzarPiso() { this.pisoActual++; }
 }
