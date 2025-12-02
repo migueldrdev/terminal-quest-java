@@ -9,7 +9,6 @@ public class Guerrero extends Personaje {
         this.armaEquipada = new Arma("Espada Oxidada", 5);
     }
 
-    // Nuevo método para cambiar arma
     public void equiparArma(Arma nuevaArma) {
         this.armaEquipada = nuevaArma;
         System.out.println("⚔️ Te has equipado: " + nuevaArma.getNombre());
