@@ -17,7 +17,7 @@ public abstract class Personaje implements Serializable {
         this.nombre = nombre;
         this.vidaActual = vida;
         this.stats = stats;
-        this.inventario = new ArrayList<>(); // Inicializamos lista vacía
+        this.inventario = new ArrayList<>();
         this.nivel = 1;
         this.experiencia = 0;
         this.experienciaParaSiguienteNivel = 100;
