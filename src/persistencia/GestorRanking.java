@@ -25,8 +25,7 @@ public class GestorRanking {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(ARCHIVO))) {
             String linea;
-            // Leemos y mostramos. (Si quieres ordenarlo, habría que meterlo en una lista y usar sort,
-            // pero para el lunes, mostrarlo así cumple).
+            
             System.out.println("HÉROE\t\tNIVEL ALCANZADO");
             System.out.println("-------------------------");
             while ((linea = reader.readLine()) != null) {
