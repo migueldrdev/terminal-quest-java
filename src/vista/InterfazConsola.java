@@ -16,7 +16,7 @@ public class InterfazConsola {
 
     public void mostrarTitulo() {
         System.out.println("\n======================================");
-        System.out.println("       LA MAZMORRA ETERNA - v3.0 (Refactor)");
+        System.out.println("       LA MAZMORRA ETERNA ");
         System.out.println("======================================");
     }
 
