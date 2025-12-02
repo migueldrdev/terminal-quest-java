@@ -4,19 +4,16 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-// 3. CLASE PADRE SERIALIZABLE (Semana 16): Para poder guardar la partida
 public abstract class Personaje implements Serializable {
     protected String nombre;
     protected int vidaActual;
     protected Estadisticas stats; // Usamos el Record aquí
 
-    // Dentro de la clase abstracta Personaje:
     protected List<Item> inventario; // Lista para aplicar Lambdas
     protected int nivel;
     protected int experiencia;
     protected int experienciaParaSiguienteNivel;
 
-    // Modifica el constructor:
     public Personaje(String nombre, int vida, Estadisticas stats) {
         this.nombre = nombre;
         this.vidaActual = vida;
@@ -27,13 +24,10 @@ public abstract class Personaje implements Serializable {
         this.experienciaParaSiguienteNivel = 100;
     }
 
-    // Método abstracto para polimorfismo
     public abstract void atacar(Personaje objetivo);
 
-    // Getters necesarios...
     public boolean estaVivo() { return vidaActual > 0; }
 
-    // Agrega estos métodos nuevos:
     public void ganarExperiencia(int exp) {
         this.experiencia += exp;
         System.out.println("✨ Ganaste " + exp + " XP.");
