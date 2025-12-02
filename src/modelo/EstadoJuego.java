@@ -3,7 +3,7 @@ import java.io.Serializable;
 
 public class EstadoJuego implements Serializable {
     private Personaje jugador;
-    private int pisoActual; // Reemplaza a las coordenadas
+    private int pisoActual;
 
     public EstadoJuego(Personaje jugador) {
         this.jugador = jugador;
