@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class GestorJuego {
     private EstadoJuego partida;
-    private final InterfazConsola vista; // Referencia a la vista
+    private final InterfazConsola vista;
     private final Serializador<EstadoJuego> serializador;
     private final GestorRanking ranking;
     private boolean ejecutando;
@@ -41,7 +41,7 @@ public class GestorJuego {
                 cargarPartida();
                 break;
             case "3":
-                ranking.mostrarRanking(); // El ranking podría adaptarse a usar vista.mensaje, pero por ahora vale
+                ranking.mostrarRanking();
                 break;
             case "4":
                 vista.mensaje("Saliendo...");
@@ -110,7 +110,7 @@ public class GestorJuego {
         int piso = partida.getPisoActual();
         vista.mensaje("⚔️ Entrando al combate en Piso " + piso);
 
-        // Generar enemigo (Lógica de negocio)
+        // Generar enemigo 
         int vidaRnd = 40 + (piso * 10) + new Random().nextInt(30);
         Estadisticas statsM = new Estadisticas(8 + (piso*2), 2 + piso, 5);
         Monstruo enemigo = new Monstruo("Orco Nvl." + piso, vidaRnd, statsM);
@@ -157,7 +157,6 @@ public class GestorJuego {
         }
     }
 
-    // Métodos auxiliares privados para limpiar lógica...
     private boolean usarPocion(Guerrero g) {
         // Filtramos con lambdas
         List<Item> pociones = g.getInventario().stream()
