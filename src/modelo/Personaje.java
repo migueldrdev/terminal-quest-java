@@ -7,9 +7,8 @@ import java.util.List;
 public abstract class Personaje implements Serializable {
     protected String nombre;
     protected int vidaActual;
-    protected Estadisticas stats; // Usamos el Record aquí
-
-    protected List<Item> inventario; // Lista para aplicar Lambdas
+    protected Estadisticas stats; 
+    protected List<Item> inventario;
     protected int nivel;
     protected int experiencia;
     protected int experienciaParaSiguienteNivel;
@@ -39,8 +38,8 @@ public abstract class Personaje implements Serializable {
     public void subirNivel() {
         this.nivel++;
         this.experiencia = 0;
-        this.experienciaParaSiguienteNivel *= 1.5; // Cada vez es más difícil subir
-        this.vidaActual = 100 + (nivel * 10); // Recupera vida y aumenta el máximo
+        this.experienciaParaSiguienteNivel *= 1.5;
+        this.vidaActual = 100 + (nivel * 10);
 
         // Mejoramos stats (creamos un nuevo Record con valores más altos)
         this.stats = new Estadisticas(stats.fuerza() + 5, stats.defensa() + 2, stats.velocidad() + 2);
